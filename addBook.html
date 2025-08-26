@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/styles.css" type="text/css">
+    <title>Add Book | Shady Grove Library System</title>
+</head>
+<body>
+    
+<nav>
+        <div class="logo">
+           <p>Shady Grove Library</p>
+        </div>
+
+        <div class="links">
+           <ul>
+              <li> 
+                <a href="Members.html">Members</a>
+              </li>
+              <li>
+                <a href="addBook.html">Add Books</a>
+              </li>
+              <li>
+                <a href="books.html">Books</a>
+              </li>
+              <li>
+                <a href="Admin.html">Admin Login</a>
+              </li>
+           </ul>
+        </div>
+        
+    </nav>
+
+    <!-- This component will be added to its own page but will be here for today -->
+ <section class="section-1">
+        <form>
+            <h2>Add a book</h2>
+            <div class="feild-set">
+                <label for="title">Book Title:</label>
+                <input type="text" name="title" />
+            </div>
+
+            <div class="feild-set">
+                <label for="category">Category:</label>
+                <select name="category" class="Category">
+                    <option value>Select Category</option>
+                    <option value="Mystery">Mystery / Crime</option>
+                    <option value="Suspense">Thriller / Suspense</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Historical">Historical Fiction</option>
+                    <option value="Literary Fiction">Literary Fiction</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Young Adult">Young Adult (YA)</option>
+                    <option value="Children’s Fiction">Children’s Fiction</option>
+                </select>
+            </div>
+
+            <div class="feild-set">
+                <label for="collection">Collection:</label>
+                <select name="collection" class="Collection">
+                    <option value="Bestsellers">Grove's Bestsellers</option>
+                    <option value="New Releases">New Releases</option>
+                    <option value="Grove's Daily Find">Grove's Daily Find (daily discounted eBook)</option>
+                </select>
+            </div>
+
+            <div class="feild-set">
+                <label for="title">Book Publisher:</label>
+                <input type="text" name="publisher" />
+            </div>
+
+            <div class="feild-set">
+                <label for="year">Year Published:</label>
+                <input type="text" name="year" />
+            </div>
+
+
+            <div class="feild-set">
+                <label for="image-upload">Upload Image:</label>
+                <input type="file" name="image-upload" id="image-upload" accept="images/png, image/jpeg, image/jpg">
+            </div>
+
+            <button type="submit" class="btn-action">Submit</button>
+
+
+        </form>
+    </section>
+
+    <script type="module" src="./Scripts/index.js"></script>
+</body>
+</html>

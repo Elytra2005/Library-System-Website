@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/styles.css" type="text/css">
+    <title>Shady Grove Library | Books</title>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+           <p>Shady Grove Library</p>
+        </div>
+
+        <div class="links">
+           <ul>
+              <li> 
+                <a href="Members.html">Members</a>
+              </li>
+              <li>
+                <a href="addBook.html">Add Books</a>
+              </li>
+              <li>
+                <a href="books.html">Books</a>
+              </li>
+              <li>
+                <a href="Admin.html">Admin Login</a>
+              </li>
+           </ul>
+        </div>
+        
+    </nav>
+
+    <section class="books-section-1">
+
+
+        <div class="books-box">
+            <h2>📚 Book Management</h2>
+        </div>
+
+        <div class="books-box hold-button">
+            <a href="addBook.html" class="remove-link-color">Add Book</a>
+        </div>
+
+        <div class="books-box" id="books-content">
+            <p class="empty-message"></p>
+        </div>
+
+
+    </section>
+
+    <script type="module" src="Scripts/index.js"></script>
+
+    <script type="text/javascript">
+      // put this inside of index html because looks like it needs more work
+      document.addEventListener("DOMContentLoaded" , () => {
+          let thebooksection = document.querySelector("#books-content");
+          try{
+          if(thebooksection.children.length > 3) {
+              console.log("You have more than 3 Books");
+              let br = document.createElement("br");
+              thebooksection.appendChild(br);
+          }
+          } catch(e) {
+            console.log(e);
+          }
+      });
+    </script>
+</body>
+</html>
