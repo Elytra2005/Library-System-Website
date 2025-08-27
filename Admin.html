@@ -8,7 +8,8 @@
 </head>
 <body>
 
-<nav>
+<body>
+    <nav>
         <div class="logo">
            <p>Shady Grove Library</p>
         </div>
@@ -29,9 +30,102 @@
               </li>
            </ul>
         </div>
-        
-</nav>
+    </nav>
 
+
+    <!-- Keeping the same class as the addbook page. Its ok -->
+    <seciton class="section-1">
+          <form>
+            
+            <h2 id="form-title">Admin Login</h2>
+            
+            <!-- Hidden feildsets -->
+            <div class="hold-main visible">
+                <div class="feild-set">
+                    <label for="title">Name: </label>
+                    <input type="text"  required placeholder="UserName" name="title" />
+                </div>
+
+
+                <div class="feild-set">
+                    <label for="title">Password: </label>
+                    <input type="text" required placeholder="Password Required" name="title" />
+                </div>
+            </div>
+           
+
+
+            <!-- Hidden feildsets -->
+
+          <div class="hold-hidden hidden">
+              <div class="feild-set">
+                  <label for="name">Name: </label>
+                  <input type="text" placeholder="Enter Name" value="">
+                </div>
+
+                <div class="feild-set">
+                  <label for="email">Email: </label>
+                  <input type="email" name="email" placeholder="Enter Email" id="email-up">
+                </div>
+
+                <div class="feild-set">
+                  <label for="Password">Password: </label>
+                  <input type="password" placeholder="Enter Password" name="Password" id="pass-up">
+                </div>
+
+                <div class="feild-set">
+
+                </div>
+          </div>
+
+           
+
+
+            <button type="submit" class="btn-action">Submit</button>
+
+            <button class="button-general">Sign Up</button>
+
+        </form>
+    </seciton>
+
+
+    <script type="text/javascript">
+      let state = true;
+      let hold_hidden = document.querySelector(".hold-hidden");
+      let hold_main = document.querySelector(".hold-main");
+      const button_general = document.querySelector(".button-general");
+      let form_title = document.querySelector("#form-title");
+    
+      button_general.addEventListener("click",  () => {
+
+          state = !state;
+          console.log(`The state is: ${state} `);
+          if(!state) {
+              // hold hidden
+            console.log("works");
+            hold_hidden.classList.remove("hidden");
+            hold_hidden.classList.add("visible");
+            form_title.textContent = "Admin Sign Up";
+            button_general.textContent = "Sign Up";
+              // hold main
+            hold_main.classList.remove("visible");
+            hold_main.classList.add("hidden");
+
+          }  else {
+            // hold hidden
+            hold_hidden.classList.remove("visible");
+            hold_hidden.classList.add("hidden");
+            form_title.textContent = "Admin Login";
+            button_general.textContent = "Login";
+            // hold main
+            hold_main.classList.remove("hidden");
+            hold_main.classList.add("visible");
+          }
+
+      });
+
+    </script>
+    
     <script type="module" src="./Scripts/index.js"></script>
 </body>
 </html>
